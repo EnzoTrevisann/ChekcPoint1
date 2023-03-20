@@ -70,10 +70,7 @@ export default function Home() {
           <Text>Submit</Text>
         </Button>
 
-        <Button onPress={(buttonIndex) => {
-          soundList[buttonIndex].unloadAsync();
-          setIsPlaying(prev => prev.map((_, i) => i === buttonIndex ? false : prev[i])); // atualiza o estado para desmarcar apenas o botão pressionado
-        }}>
+        <Button onPress={() => setHandleValue('')}>
           <Text>Reset</Text>
         </Button>
 
